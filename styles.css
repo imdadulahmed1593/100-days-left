@@ -1,106 +1,119 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
 }
 
 nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #007BFF;
-    font-weight: bold;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    row-gap: 250px;
-    column-gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  row-gap: 250px;
+  column-gap: 15px;
 }
 
 .card {
-    perspective: 1000px;
-    padding: 10px;
+  perspective: 1000px;
+  padding: 10px;
 }
 
 .card-inner {
-    width: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
 }
 
 .card.flip .card-inner {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
-.card-front, .card-back {
-    width: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    width: 100%;
-    height: 200px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+.card-front,
+.card-back {
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
 
 .card-front {
-    background-color: #fff;
+  background: linear-gradient(135deg, #8b0000, #b22222, #dc143c);
+  color: #fff;
 }
 
 .card-back {
-    background-color: #eee;
-    transform: rotateY(180deg);
-    flex-direction: column;
-    overflow-y: auto;
+  background-color: #eee;
+  transform: rotateY(180deg);
+  flex-direction: column;
+  overflow-y: auto;
 }
 
-input, button {
-    margin: 10px 0;
+.card-back input {
+  width: 100%;
 }
+
+input,
+button {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle; /* Ensures the checkbox is aligned properly with the text */
+  }
 
 /* ul {
     list-style: none;
 } */
 
 .scrollable-list {
-    max-height: 100px;
-    overflow-y: scroll;
-    width: 100%;
-    padding: 0;
-    list-style-type: circle;
+  max-height: 100px;
+  overflow-y: scroll;
+  width: 100%;
+  padding: 0;
+  /* list-style-type: circle; */
 }
 
 @media (max-width: 600px) {
-    .card-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 }

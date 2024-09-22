@@ -18,7 +18,7 @@ for (let i = 100; i > 0; i--) {
             <div class="card-back">
                 <input type="text" placeholder="Add achievement">
                 <button onclick="addAchievement(this)">Add</button>
-                <ul class="scrollable-list"></ul>
+                <ul type="disc" class="scrollable-list"></ul>
             </div>
         </div>
     `;
